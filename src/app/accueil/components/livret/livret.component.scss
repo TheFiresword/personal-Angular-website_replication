@@ -1,0 +1,81 @@
+.livret{
+    margin-top: 20px;
+    text-align: center;
+    font-family: Roboto, 'Segoe UI', Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: small;
+    display: flex;
+    flex-direction: column;
+    width: 3.8cm;
+    height: 7.5cm;
+    background-color: rgba(233, 227, 227, 0.8);
+
+    .titre{
+        color: red;
+        padding: 5px 5px;
+        height: 1cm;
+        border-radius: 3px;
+    }
+    .image{
+        position: relative;
+    }
+    
+    
+    
+}
+/**.livret:hover
+{
+    .titre{
+        color: white;
+        //background-color: rgb(255, 0, 0);
+        
+    }
+    
+    cursor: pointer;
+    .triangle{
+        border-top: 15px solid red;
+    }
+}**/
+
+
+.triangle {
+    content:"";
+    border: 0 solid transparent;
+    border-right-width: 10px;
+    border-left-width: 10px;
+    border-top: 15px solid rgba(233, 227, 227, 1);
+    width: 0;
+    height: 0;
+    margin-left: 45%;
+    position:absolute;
+    top: 0;
+}
+
+
+@media screen and (max-width:835px) {
+    .livret{
+        width: 95%;
+        height: 6cm;
+        padding-left: 1%;
+        text-align: left;
+        display: block;
+        margin: 1%;
+    }
+    .titre{
+        background-color: rgb(230, 224, 224);
+    }
+    .image{
+        float: left;
+        width: 40%;
+    }
+    .image img{
+        width: 100%;
+    }
+    .triangle{
+        margin-left: 10%;
+        top: 20%;
+    }
+    .texte{
+        width: 57%;
+        margin-left: 42%;
+    }
+}

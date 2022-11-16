@@ -1,0 +1,22 @@
+*{
+    box-sizing: border-box;
+}
+.main-content{
+    text-align: center;
+    margin: auto;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+}
+.hr{
+    font-size:large;
+    font-family:Roboto;
+    color:gray;
+    text-align:left;
+    margin-top: 20px;
+    padding-left: 5%;
+}
+
+@media screen and (max-width:835px){
+    
+}

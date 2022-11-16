@@ -1,0 +1,155 @@
+
+
+    <div class="current_image_enveloppe" >
+     
+          <button mat-icon-button class="fleche1" [ngStyle]="{color:'red'}" (click)="changeImageRight()" >
+            <mat-icon> arrow_circle_left</mat-icon>
+          </button>
+    
+
+      <div class="image_drapped">
+
+        
+        <img mat-card-image [src]="myImage.source" width="100%" height="100%">
+        <div class="rideau">     
+          <h2>{{myImage.titre}} </h2>
+          <p>{{myImage.description}}</p>
+          <a href="" class="suite"><mat-icon>arrow_forward</mat-icon>Lire la suite</a>
+        </div>
+        
+
+      </div>
+       
+    
+         <button mat-icon-button class="fleche2" [ngStyle]="{color:'red'}" (click)="changeImageLeft()" >
+          <mat-icon> arrow_circle_right</mat-icon> 
+         </button>
+
+         
+     
+         
+     </div>
+    
+
+     <!--Petites fenêtres à afficher quand on clique sur un menu
+    Cette partie du code devrait être dans le header mais problème à positionner les fenêtres sur l'image défilante-->
+     <!--Fenêtre Formation-->
+     <!----
+     <div *ngIf="imageService.activated[0]" class="complement_0" (mouseleave)="imageService.supprimeComplementaire(0)">
+            
+      <div><img src="assets/formation2.jpg" alt="" [ngStyle]="{'margin-top':'12px','margin-left':'12px'}"></div>
+      <div class="titreElements">
+          <div style="color: red;" [ngStyle]="{'text-align':'center'}">FORMATION</div>
+      <div class=" elementsComplement">
+          <div ><mat-icon [ngStyle]="{'vertical-align':'bottom'}">arrow_right</mat-icon>Droits d'inscription rentrée 2021</div>
+          <div><mat-icon [ngStyle]="{'vertical-align':'bottom'}">arrow_right</mat-icon>Rentrée 2021: campus de Blois</div>
+          <div ><mat-icon [ngStyle]="{'vertical-align':'bottom'}">arrow_right</mat-icon>Rentrée 2021: campus de Bourges</div>
+          <div><mat-icon [ngStyle]="{'vertical-align':'bottom'}">arrow_right</mat-icon>Admission</div>
+          <div><mat-icon [ngStyle]="{'vertical-align':'bottom'}">arrow_right</mat-icon>Filières spécifiques (arts-musique-sport-bilingue)</div>
+          <div><mat-icon [ngStyle]="{'vertical-align':'bottom'}">arrow_right</mat-icon>Sciences et Technologies Pour l'Ingénieur</div>
+          <div><mat-icon [ngStyle]="{'vertical-align':'bottom'}">arrow_right</mat-icon>Maîtrise des Risques Industriels</div>
+          <div><mat-icon [ngStyle]="{'vertical-align':'bottom'}">arrow_right</mat-icon>Sécurité et Technologies Informatique</div>
+          <div><mat-icon [ngStyle]="{'vertical-align':'bottom'}">arrow_right</mat-icon>Génie des Systèmes Industriels</div>
+          <div><mat-icon [ngStyle]="{'vertical-align':'bottom'}">arrow_right</mat-icon>Ingénieur par Apprentissage (GSI-ERE-STI)</div>
+          <div><mat-icon [ngStyle]="{'vertical-align':'bottom'}">arrow_right</mat-icon>Ecole de la nature et du paysage</div>            
+          <div><mat-icon [ngStyle]="{'vertical-align':'bottom'}">arrow_right</mat-icon>Masters</div>
+          <div><mat-icon [ngStyle]="{'vertical-align':'bottom'}">arrow_right</mat-icon>Formation continue</div>
+          <div><mat-icon [ngStyle]="{'vertical-align':'bottom'}">arrow_right</mat-icon>Doubles diplômes</div>
+          <div><mat-icon [ngStyle]="{'vertical-align':'bottom'}">arrow_right</mat-icon>Retirer son diplôme</div>
+        </div> 
+      </div>
+      </div>
+    -->
+      <!--Fenetre recherche-->
+      <!---
+      <div *ngIf="imageService.activated[1]" class="complement_0 complement_1" (mouseleave)="imageService.supprimeComplementaire(1)">
+        <div><img src="assets/formation3.jpg" alt="" [ngStyle]="{'margin-top':'12px','margin-left':'12px'}"></div>
+      <div class="titreElements">
+          <div style="color: red;"  [ngStyle]="{'text-align':'center'}">RECHERCHE</div>
+      <div class=" elementsComplement">
+        <div><mat-icon [ngStyle]="{'vertical-align':'bottom'}">arrow_right</mat-icon>Laboratoires et fédérations</div>
+        <div><mat-icon [ngStyle]="{'vertical-align':'bottom'}">arrow_right</mat-icon>Plateformes</div>
+        <div><mat-icon [ngStyle]="{'vertical-align':'bottom'}">arrow_right</mat-icon>Masters</div>
+        <div><mat-icon [ngStyle]="{'vertical-align':'bottom'}">arrow_right</mat-icon>Ecoles doctorales</div>
+        <div><mat-icon [ngStyle]="{'vertical-align':'bottom'}">arrow_right</mat-icon>Transfert et valorisation</div>
+        <div><mat-icon [ngStyle]="{'vertical-align':'bottom'}">arrow_right</mat-icon>Projets de recherche en cours</div>
+      </div>
+      </div>
+      </div>
+
+      --Fenetre Entreprise--
+      <div *ngIf="imageService.activated[2]" class="complement_0 complement_2" (mouseleave)="imageService.supprimeComplementaire(2)">
+        <div><img src="assets/formation4.jpg" alt="" [ngStyle]="{'margin-top':'12px','margin-left':'12px'}"></div>
+      <div class="titreElements">
+          <div style="color: red;"  [ngStyle]="{'text-align':'center'}">ENTREPRISES</div>
+      <div class=" elementsComplement">
+        <div><mat-icon [ngStyle]="{'vertical-align':'bottom'}">arrow_right</mat-icon>Devenir partenaire</div>
+        <div><mat-icon [ngStyle]="{'vertical-align':'bottom'}">arrow_right</mat-icon>Forums Entreprises</div>
+        <div><mat-icon [ngStyle]="{'vertical-align':'bottom'}">arrow_right</mat-icon>Déposez vos offres d'emplois et de stages</div>
+        <div><mat-icon [ngStyle]="{'vertical-align':'bottom'}">arrow_right</mat-icon>Formation continue</div>
+        <div><mat-icon [ngStyle]="{'vertical-align':'bottom'}">arrow_right</mat-icon>Taxe d'Apprentissage</div>
+        <div><mat-icon [ngStyle]="{'vertical-align':'bottom'}">arrow_right</mat-icon>Fonds de dotation</div>
+      </div>
+      </div>
+      </div>
+
+      --Fenetre Innovarion--
+      <div *ngIf="imageService.activated[3]" class="complement_0 complement_3" (mouseleave)="imageService.supprimeComplementaire(3)">
+        <div><img src="assets/formation5.jpg" alt="" [ngStyle]="{'margin-top':'12px','margin-left':'12px'}"></div>
+      <div class="titreElements">
+          <div style="color: red;"  [ngStyle]="{'text-align':'center'}">INNOVATION</div>
+      <div class=" elementsComplement">
+        <div><mat-icon [ngStyle]="{'vertical-align':'bottom'}">arrow_right</mat-icon>Etudiant entrepreneur et pepite</div>
+        <div><mat-icon [ngStyle]="{'vertical-align':'bottom'}">arrow_right</mat-icon>Formation entrepreneuriale</div>
+        <div><mat-icon [ngStyle]="{'vertical-align':'bottom'}">arrow_right</mat-icon>Incubateur et chaires</div>
+      </div>
+      </div>
+      </div>
+
+
+      -Fenetre International--
+      <div *ngIf="imageService.activated[4]" class="complement_0 complement_4" (mouseleave)="imageService.supprimeComplementaire(4)">
+        <div><img src="assets/formation6.jpg" alt="" [ngStyle]="{'margin-top':'12px','margin-left':'12px'}"></div>
+      <div class="titreElements">
+          <div style="color: red;"  [ngStyle]="{'text-align':'center'}">INTERNATIONAL</div>
+      <div class=" elementsComplement">
+      <div><mat-icon [ngStyle]="{'vertical-align':'bottom'}">arrow_right</mat-icon>Partenaires internationaux</div>
+      <div><mat-icon [ngStyle]="{'vertical-align':'bottom'}">arrow_right</mat-icon>Etudiants internationaux en échange</div>
+      <div><mat-icon [ngStyle]="{'vertical-align':'bottom'}">arrow_right</mat-icon>Partir à l'étranger</div>
+      <div><mat-icon [ngStyle]="{'vertical-align':'bottom'}">arrow_right</mat-icon>Doubles diplômes</div>
+      <div><mat-icon [ngStyle]="{'vertical-align':'bottom'}">arrow_right</mat-icon>Mobilité du personnel</div>
+      <div><mat-icon [ngStyle]="{'vertical-align':'bottom'}">arrow_right</mat-icon>Section Internationale Bilingue</div>
+      </div>
+      </div>
+      </div>
+    
+
+      --Fenetre Vie etudiante--
+      <div *ngIf="imageService.activated[5]" class="complement_0 complement_5" (mouseleave)="imageService.supprimeComplementaire(5)">
+        <div><img src="assets/formation7.jpg" alt="" [ngStyle]="{'margin-top':'12px','margin-left':'12px'}"></div>
+      <div class="titreElements">
+          <div style="color: red;"  [ngStyle]="{'text-align':'center'}">VIE ETUDIANTE</div>
+      <div class=" elementsComplement">  
+
+      <div><mat-icon [ngStyle]="{'vertical-align':'bottom'}">arrow_right</mat-icon>Vie associative</div>
+      <div><mat-icon [ngStyle]="{'vertical-align':'bottom'}">arrow_right</mat-icon>Vivre sur les Campus de Blois et de Bourges</div>
+      <div><mat-icon [ngStyle]="{'vertical-align':'bottom'}">arrow_right</mat-icon>Solidarité</div>
+      <div><mat-icon [ngStyle]="{'vertical-align':'bottom'}">arrow_right</mat-icon>INSA Stories</div>
+      <div><mat-icon [ngStyle]="{'vertical-align':'bottom'}">arrow_right</mat-icon>Programme de bourses</div>
+      <div><mat-icon [ngStyle]="{'vertical-align':'bottom'}">arrow_right</mat-icon>Egalité</div>
+      <div><mat-icon [ngStyle]="{'vertical-align':'bottom'}">arrow_right</mat-icon>Section disciplinaire</div>
+      </div>
+      </div>
+      </div>
+    -->
+
+
+
+    
+
+
+
+
+
+
+

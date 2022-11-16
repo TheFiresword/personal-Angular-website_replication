@@ -1,0 +1,95 @@
+
+<head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap" rel="stylesheet">
+</head>
+
+
+<div class="body">
+
+ <!-- Couche 1 du header-->
+<div class="couche_1">
+<nav class="barreHaut">
+    <a class="accueil_link"><mat-icon [ngStyle]="{'vertical-align':'bottom','color':'red'}">arrow_right</mat-icon>ACCUEIL</a>
+    <a class="marche_public_link"><mat-icon [ngStyle]="{'vertical-align':'bottom','color':'red'}">arrow_right</mat-icon>MARCHES PUBLICS</a>
+    <div>
+    <input class="recherche" placeholder="Recherche" type="search" id="1">
+    <input type="submit" value="Ok" class="submit">
+    <i></i>
+    </div>
+    
+    <select [ngStyle]="{'border':'0px','background-color':'black','color':'white'}">
+        <option [ngStyle]="{color:'red'}">FR</option>
+        <option [ngStyle]="{color:'red'}">ES</option>
+    </select>
+</nav>
+</div>
+
+<!--Couche 2 du header-->
+<div class="couche_2">
+
+<div class="pre_couche_2">
+    <img class="logo_insa" src="assets/logo_insa_vrai.png" alt="insa cvl" width="200cm"  >
+    
+    <!--Le bloc bibliotheque + le bloc admission-->
+    <div class="box_biblio_admis">
+        
+        <!--Tout le bloc bibliothèque-->
+        <div class="emballage_box_bibliotheque">
+
+        <div class="box_bibliotheque">
+            <div class="newpolice1"><mat-icon >file_present</mat-icon> BIBLIOTHEQUES</div>
+            
+            <!--Liste de sélection-->
+            <label for="biblio_select" class="newpolice2">Choisissez une rubrique</label>
+            <div class="bibliotheques">
+            <select id="biblio_select">
+                <option>Bibliothèques</option>
+                <option>Nouveautés</option>
+                <option>Ressources électroniques</option>
+            </select>
+        </div>
+
+        </div>
+
+        </div>
+
+        <!--Le bouton d'admission-->
+        <div>
+        <button class="admission">
+            <mat-icon aria-hidden="false" aria-label="Element">edit_note</mat-icon>  
+            ADMISSION
+            </button>
+        </div>
+        
+    </div>
+</div>
+</div>
+<!--Couche 3 du header-->
+<div class="couche_3" *ngIf="!myScreen.widthChanged">
+<div class="formation" (mouseover)="imageService.afficheComplementaire(0)" routerLink="" [ngStyle]="{width: '80px'}">FORMATION</div>
+<div (mouseover)="imageService.afficheComplementaire(1)" routerLink="" [ngStyle]="{width: '80px'}">RECHERCHE </div>
+<div (mouseover)="imageService.afficheComplementaire(2)" routerLink="" [ngStyle]="{width: '90px'}">ENTREPRISES</div>
+<div  (mouseover)="imageService.afficheComplementaire(3)" routerLink="" [ngStyle]="{width: '225px'}">INNOVATION & ENTREPRENEURIAT</div>
+<div (mouseover)="imageService.afficheComplementaire(4)" routerLink=""  [ngStyle]="{width: '110px'}">INTERNATIONAL</div>
+<div (mouseover)="imageService.afficheComplementaire(5)" routerLink="" [ngStyle]="{width: '100px'}">VIE ETUDIANTE</div>
+
+</div>
+
+
+<!-- Responsive design -->
+<!--COUCHE 3-->
+<div class="couche_3_rm" *ngIf="myScreen.widthChanged">
+
+    <div class="home_share" >
+        <button class="bouton_home"><mat-icon [ngStyle]="{color: 'white'}">home</mat-icon></button>
+        <button class="bouton_share"><mat-icon [ngStyle]="{color: 'white'}">share</mat-icon></button>
+    </div>
+        
+    <button class="bouton_menu"><mat-icon [ngStyle]="{color: 'white'}">menu</mat-icon></button>
+</div>
+
+</div>
+
+

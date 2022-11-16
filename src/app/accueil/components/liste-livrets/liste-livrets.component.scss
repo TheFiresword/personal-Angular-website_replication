@@ -1,0 +1,19 @@
+.liste_livrets{
+    width: 90%;
+    margin-left: 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    
+}
+
+
+@media screen and(max-width:835px) {
+    .liste_livrets{
+        flex-direction: column;
+        width: 100vw;
+        left: 0vw;
+    }
+    
+}

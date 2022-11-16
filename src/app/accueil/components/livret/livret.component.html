@@ -1,0 +1,17 @@
+
+<div class="livret" red-color>
+    
+    <div class="titre" red-color>{{livret.titre}}</div>
+      
+    
+
+    <div class="image">
+        <img mat-card-image [src]="livret.source">
+        <div class="triangle"></div>
+    </div>
+
+    <div class="texte">
+        <h5 [ngStyle]="{'font-weight':'bold'}">{{livret.description}}</h5>
+        <p>{{livret.message}}</p>
+    </div>
+</div>
